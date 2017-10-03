@@ -1,0 +1,177 @@
+/* Sticky nav styles
+-------------------------------------------------- */
+.nav-container {
+  width: 100%;
+  height: 33px;
+  z-index: 1000;
+  position: relative;
+}
+#ddc-logo {
+  background: url(../images/navbar/DD_logo_sml.png) no-repeat;
+  background-size: contain;
+  max-width: 100%;
+  top: 11px;
+  width: 62px;
+  height: 40px;
+  margin: 0 18px;
+  padding: 0;
+  z-index: 10;
+  position: fixed;
+}
+#gold-frame {
+  background: url(../images/navbar/gold_frame-top.png) repeat-x;
+  width: 100%;
+  height: 2px;
+  top: 30px;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 9;
+  position: fixed;
+  box-shadow: 0px 3px 10px #000000;
+}
+#nav-color-bar {
+  width: 100%;
+  height: 30px;
+  top: 0;
+  background: #000000 repeat;
+  margin: 0;
+  padding: 0;
+  z-index: 8;
+  position: fixed;
+}
+/* Navbar Media Queries
+-------------------------------------------------- */
+/* Centers logo on devices when the orientation is portrait */
+@media (min-width: 320px){
+  .nav-container {
+    position: fixed;
+  }
+  #ddc-logo {
+    margin: 0 auto;
+    position: relative;
+  }
+}
+/* Centers logo beginning width tablet-sized devices, swaps small logo for larger logo, and increase the navbar height */
+@media (min-width: 768px){
+  .nav-container {
+    height: 53px;
+    position: fixed; /* remove position for logo to move the the left side */
+  }
+  #ddc-logo {
+    background: url(../images/navbar/logo_white_igt_150x150.png) no-repeat;
+    background-size: contain;
+    width: 113px;
+    height: 76px;
+    top: 14px;
+    margin: 0 8%; /* margin: 0 30px; - logo to the left*/
+     /* remove position - anchors logo to left */
+  }
+  #gold-frame {
+    height: 6px;
+    top: 45px;
+  }
+  #nav-color-bar {
+    height: 50px;
+  }
+}
+/*========================================================================================
+=========================================================================================*/
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+.footer {
+  display:block;
+  bottom: 0;
+  width: 100%;
+  height: 30px; 
+  clear:both;
+  z-index: 1000;
+  background-color: #fb7497; /* change footer color here */
+}
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+	margin:0 auto;
+	text-align: center;
+	font-size:12px;
+	line-height:2.5;
+	text-transform: uppercase;
+}
+footer li{
+	display:inline;
+	margin:0;
+	padding: 10px 0 7px 0;
+	list-style-type: none;
+}
+footer a {
+	color:#ffffff;
+	text-decoration:none;
+}
+footer a:hover {
+	color:#252525;
+}
+footer li:not(:first-child):before {
+	content: " | ";
+	padding:0 10px;
+	color:#ffffff;
+}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container .text-muted {
+  margin: 3px 0;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #000;
+}
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+code {
+  font-size: 80%;
+}
+
+/* Footer Media Queries
+-------------------------------------------------- */
+@media (max-width: 768px){ 
+  .footer {
+	position:relative;
+	  margin-top:0;
+  }
+  .container .text-muted {
+    margin: 20px 0;
+  }
+}
+/*// Nexus 6 Tablet Landscape*/
+@media (max-width: 732px) and (orientation: landscape){
+	.footer {
+		position: inherit;
+	}
+}
+@media (max-width: 568px){  
+	.footer {
+		position: relative;
+		margin-top: 690px;
+	}
+  .container .text-muted {
+    margin: 20px 0 0 0;
+  }
+}
+@media (max-width: 414px) {
+	.footer {
+		position: relative;
+		margin-top: 500px;
+
+	}
+}
+@media (max-width: 320px) {
+	.footer {
+		position: relative;
+		margin-top: 400px;
+
+	}
+}

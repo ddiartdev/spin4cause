@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #d66680;
+  text-decoration: underline;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  background-color: #faafc9;
+}
+body {
+  color: #b54a63;
+  text-align:left;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+	width:100%;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+}
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+.masthead-brand {
+  margin-bottom: 0;
+}
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: bold;
+  color: rgba(255,255,255,.5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+/* --------------------------custom CSS for Spin for a Cause-------------------------------- */
+.container {
+    max-width: 1700px;	
+}
+.row {
+	width:100%;
+	padding:0 3%;
+	margin: 0 0 ;
+}
+.spacer {
+	padding-top: 100px;
+}
+.left	{
+	text-align: left;
+	padding: 0 3%;
+}
+.bold {
+	font-size: 1.5rem;
+    font-weight: 600;
+}
+.lead {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.logo {
+    padding: 30px 0 20px 0;
+    align-items: left;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.logo img	{
+	vertical-align: top;
+}
+.gold	{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cbac1b+0,f9e484+17,f9e484+29,caab1d+70,f9e484+90,caab1d+100 */
+	background: #cbac1b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cbac1b 0%, #f9e484 17%, #f9e484 29%, #caab1d 70%, #f9e484 90%, #caab1d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #cbac1b 0%,#f9e484 17%,#f9e484 29%,#caab1d 70%,#f9e484 90%,#caab1d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #cbac1b 0%,#f9e484 17%,#f9e484 29%,#caab1d 70%,#f9e484 90%,#caab1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbac1b', endColorstr='#caab1d',GradientType=0 ); /* IE6-9 */
+	box-shadow: 2px 2px 8px #000000;
+}
+.buttontext	{
+	color:#46363b;
+	letter-spacing:1.5px;
+	box-shadow: 2px 2px 8px #000000;
+	font-size: 1.5rem;
+    font-weight: 600;
+	text-decoration: none;
+}
+.nbcflogo {
+	padding: 14px 0;
+	max-width: 319px;
+	height: auto;
+}
+.right	{
+  padding:60px 3% 0 3%;
+}
+.meter1 {
+    width: 100%;
+	height:auto;
+	overflow:hidden;
+}
+.bow1	{
+	z-index: 902;
+	max-width:100%;
+	width: 93%;
+	height:auto;
+	position: absolute;
+    top: 55px;
+}
+#progress_ribbon	{
+	z-index: 899;
+	max-width:75%;
+	width:75%;
+	height:0%;
+		background-color: #f481a2;
+	-webkit-animation: progress-bar-stripes 1s linear infinite reverse;
+    animation: progress-bar-stripes 1s linear infinite reverse;
+	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+	position:absolute;
+	bottom:0px;
+}
+.bow2	{
+	z-index: 900;
+	max-width:100%;
+	position: absolute;
+    top: 90px;
+	height:auto;
+	overflow:hidden;
+}
+.bow3	{
+	z-index: 901;
+	max-width:100%;
+	position: absolute;
+    top: 90px;
+	height:auto;
+	overflow:hidden;
+}
+.modal {
+	display:none;
+}
+/* --------------------------end custom CSS for Spin for a Cause---------------------------- */
+
+
+/* --------------------------MEDIA QUERIES-------------------------------------------------- */
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: bold;
+}
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255,255,255,.5);
+}
+/*
+ * Affix and center
+ */
+@media (min-width: 40em) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: top;
+	padding:60px 0;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 42rem;
+  }
+}
+
+/*  ////////////////////////// General Media Queries ///////////////////////////////////// */
+/*// Large Desktop (1440x900)*/
+@media (max-width: 1440px) {
+	.bow1 {
+		top: 57px;
+	}
+}
+/*// Medium Desktop (1366x900)*/
+@media (max-width: 1366px) {
+	.bow1 {
+		top: 61px;
+	}
+}
+/*// Medium devices (landscape iPad)*/
+@media (max-width: 1024px) {
+	.site-wrapper-inner {
+		vertical-align: top;
+		padding: 50px 0 50px 0;
+	}
+	#ddc-logo {
+		margin: 0 4%;
+	}
+	.row {
+		width: 100%;
+		padding: 0 0;
+		margin: 0 0;
+	}
+	.left {
+	   padding: 0 0;
+	   text-align: left;
+	}
+	.right {
+	   padding: 0 0;
+		text-align: left;
+	}
+	.bow1 {
+		top: 65px;
+		width:99%;
+	}
+}
+/*// Medium devices (Portrait iPad)*/
+@media (max-width: 768px) {
+	.site-wrapper-inner {
+		padding: 53px 0 60px 0;
+	}
+	.bow1 {
+		top: 71px;
+	}
+	.lead {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	#ddc-logo {
+		margin: 0 3%;
+	}
+}
+/*// iPhone 7+/6+ (Landscape) */
+@media (max-width: 736px) and (orientation:landscape) {
+	.site-wrapper-inner {
+		padding: 29px 0 60px 0;
+	}
+	.logo {
+		padding: 15px 0 20px 0;
+		max-width: 82%;
+	}
+	.bow1 {
+		top: 71px;
+	}
+	.lead {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	#ddc-logo {
+		margin: 0 3%;
+	}
+}
+/*// Small devices (iPhone 7&6)*/
+@media (max-width: 667px) and (orientation:landscape) {
+	.row {
+		width: 92%;
+		margin: 0 auto;
+	}
+	.lead {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	.logo {
+		padding: 20px 0 20px 0;
+		max-width: 92%;
+	}
+	.bow1 {
+		top: 74px;
+	}
+}
+/*// Small phone (iPhone 5 Landscape)*/
+@media (max-width: 568px) and (orientation:landscape) {
+	.row {
+		width: 92%;
+		margin: 0 auto;
+	}
+	.lead {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	.logo {
+    padding: 18px 0 20px 0;
+    align-items: left;
+    max-width: 47%;
+    height: auto;
+    vertical-align: top;
+}	
+	.bow1 {
+		top: 66px;
+		width: 99%;
+	}	
+}
+/* Phone (iPhone 7+/6+ Portrait)*/
+@media (max-width: 414px)  and (orientation:portrait){
+	.site-wrapper-inner {
+		padding: 31px 0;
+	}
+	.row {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.lead {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	.bow1 {
+		top: 72px;
+	}	
+}
+/* Phone (iPhone 7/6 Portrait)*/
+@media (max-width: 375px)  and (orientation:portrait){
+	.site-wrapper-inner {
+		padding: 31px 0;
+	}
+	.row {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.lead {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	.bow1 {
+		top: 72px;
+	}	
+}
+/* Small Phone (iPhone 5 Portrait)*/
+@media (max-width: 320px) and (orientation:portrait) {
+	.site-wrapper-inner {
+		padding: 31px 0 60px 0;
+	}
+	.row {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.lead {
+		font-size: 1.1rem;
+		font-weight: 500;
+		  line-height: 1.5em;
+	}
+	.bow1 {
+		top: 76px;
+		width: 99%;
+	}	
+}
+
