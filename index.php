@@ -21,7 +21,7 @@
 			var d = <?php echo date("d"); ?>;
 			var n = <?php echo date("H"); ?>;
 
-			if (d == 05) {
+			if (d == 10) {
 
 				if (n > 5 && n < 8) {  // 6-7am
 					$('#progress_ribbon').css("height", "3%");
@@ -31,6 +31,7 @@
 					
 				} else if (n > 9 && n < 12) { // 10-11:59am
 					$('#progress_ribbon').css("height", "12%");
+					$('#progress_ribbon').addClass("complete");
 					
 				} else if (n > 11 && n < 14) { // 12-1:59pm or 12-13
 					$('#progress_ribbon').css("height", "18%");
@@ -79,11 +80,9 @@
 					
 				} else if (n > 13 && n < 16) { // 2-3:59pm (14-15:59)
 					$('#progress_ribbon').css("height", "85%");
-					$('#progress_ribbon').addClass("complete");
 					
 				} else if (n > 15 && n < 18) { // 4-5:59pm (16-17:59)
 					$('#progress_ribbon').css("height", "90%");
-					$('#progress_ribbon').addClass("complete");
 					
 				} else if (n > 17 && n < 20) { // 6-7:59pm (18-19:59)
 					$('#progress_ribbon').css("height", "94%");
