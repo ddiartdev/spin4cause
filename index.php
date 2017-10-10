@@ -21,7 +21,7 @@
 			var d = <?php echo date("d"); ?>;
 			var n = <?php echo date("H"); ?>;
 
-			if (d == 10) {
+			if (d == 17) {
 
 				if (n > 5 && n < 8) {  // 6-7am
 					$('#progress_ribbon').css("height", "3%");
@@ -31,7 +31,6 @@
 					
 				} else if (n > 9 && n < 12) { // 10-11:59am
 					$('#progress_ribbon').css("height", "12%");
-					$('#progress_ribbon').addClass("complete");
 					
 				} else if (n > 11 && n < 14) { // 12-1:59pm or 12-13
 					$('#progress_ribbon').css("height", "18%");
